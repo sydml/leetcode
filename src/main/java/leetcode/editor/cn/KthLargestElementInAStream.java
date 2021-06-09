@@ -47,7 +47,7 @@ public class KthLargestElementInAStream {
     public static void main(String[] args) {
 //		Solution solution = new KthLargestElementInAStream().new Solution();
         int[] nums = new int[]{4,5,8,2};
-        KthLargest largest = new KthLargest(3, nums);
+        KthLargest largest = new KthLargestElementInAStream().new KthLargest(3, nums);
         //[[3,[4,5,8,2]],[3],[5],[10],[9],[4]]
         largest.add(3);
         largest.add(5);
@@ -56,10 +56,6 @@ public class KthLargestElementInAStream {
         largest.add(4);
 
     }
-
-
-
-}
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class KthLargest {
@@ -144,3 +140,4 @@ class KthLargest {
  * int param_1 = obj.add(val);
  */
 //leetcode submit region end(Prohibit modification and deletion)
+}
