@@ -74,7 +74,8 @@ class Solution {
 		ListNode dummy = new ListNode(-1);
 		ListNode p = dummy;
 		// 优先级队列，最小堆
-		PriorityQueue<ListNode> pq = new PriorityQueue<>(lists.length, (a, b)->(a.val - b.val));
+		PriorityQueue<ListNode> pq = new PriorityQueue<>(
+				lists.length, (a, b)->(a.val - b.val));
 		// 将 k 个链表的头结点加入最小堆
 		for (ListNode head : lists) {
 			if (head != null)
