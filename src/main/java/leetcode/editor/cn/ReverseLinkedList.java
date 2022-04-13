@@ -70,6 +70,22 @@ class Solution {
 		head.next = null;
 		return last;
     }
+	/*public ListNode reverseList(ListNode head) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+		ListNode pre,cur,nxt;
+		pre = null;
+		cur = head;nxt = head;
+
+		while (cur != null) {
+			nxt = cur.next;
+			cur.next = pre;
+			pre = cur;
+			cur = nxt;
+		}
+		return pre;
+	}*/
 }
 //leetcode submit region end(Prohibit modification and deletion)
 
