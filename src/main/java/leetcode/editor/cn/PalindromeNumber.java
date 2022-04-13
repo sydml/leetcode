@@ -62,25 +62,15 @@ public class PalindromeNumber{
 	//leetcode submit region begin(Prohibit modification and deletion)
 	class Solution {
 		public boolean isPalindrome(int x) {
-			Set set = new HashSet();
-			String s = String.valueOf(x);
-			char[] chars = s.toCharArray();
-			for (int i = 0; i < chars.length; i++) {
-				if (set.contains(chars[i])) {
-					set.remove(chars[i]);
-				}else{
-					set.add(chars[i]);
+			String[] ss = String.valueOf(x).split("");
+			int left = 0, right = ss.length - 1;
+			while (left < right) {
+				if (!ss[left].equals(ss[right])){
+					return false;
 				}
+				left++; right--;
 			}
-			/*for (int i = 0; i < s.length()/2 || s.length()<2; i++) {
-				if (set.contains(s.substring(i, i + 1))) {
-					set.remove(s.substring(i, i + 1));
-				}else {
-					set.add(s.substring(i, i + 1));
-				}
-			}
-*/
-			return set.size() <= 1;
+			return true;
 		}
 	}
 //leetcode submit region end(Prohibit modification and deletion)
