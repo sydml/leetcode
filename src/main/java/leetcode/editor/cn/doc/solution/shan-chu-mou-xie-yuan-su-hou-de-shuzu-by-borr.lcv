@@ -1,0 +1,28 @@
+# 方法一：排序模拟
+
+我们对数组进行排序，计算出删除的个数，然后累加即可
+**代码如下**
+
+* java
+
+```java
+class Solution {
+    public double trimMean(int[] arr) {
+        //排序
+        Arrays.sort(arr);
+        int n = arr.length;
+        //计算删除的个数
+        int removeCount = (int) (n * 0.05);
+        int sum = 0;
+        //累加
+        for (int i = removeCount; i < n - removeCount; i++) {
+            sum += arr[i];
+        }
+        //计算均值
+        return sum / (n * 0.9);
+    }
+}
+```
+
+写题解不易，**如果对您有帮助，记得关注 + 点赞 + 收藏呦！！！**
+**每天都会更新每日一题题解，大家加油！！**
