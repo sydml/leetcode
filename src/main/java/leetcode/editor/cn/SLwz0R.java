@@ -71,7 +71,7 @@ public class SLwz0R {
         public ListNode removeNthFromEnd(ListNode head, int n) {
             ListNode dummy = new ListNode(-1);
             dummy.next = head;
-            // 这里入参是dummy，不是head
+            // 这里入参是dummy，不是head是为了避免如果链表共n个节点时，题让找到倒数第n+1个节点会导致空指针
             ListNode nthFromEnd = findNthFromEnd(dummy, n + 1);
             nthFromEnd.next = nthFromEnd.next.next;
             return dummy.next;
