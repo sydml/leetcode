@@ -71,6 +71,7 @@ public class SLwz0R {
         public ListNode removeNthFromEnd(ListNode head, int n) {
             ListNode dummy = new ListNode(-1);
             dummy.next = head;
+            // 这里入参是dummy，不是head
             ListNode nthFromEnd = findNthFromEnd(dummy, n + 1);
             nthFromEnd.next = nthFromEnd.next.next;
             return dummy.next;
