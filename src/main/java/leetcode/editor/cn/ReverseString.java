@@ -29,10 +29,20 @@ public class ReverseString{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public void reverseString(char[] s) {
-		for (int i = 0; i < s.length/2; i++) {
+		/*for (int i = 0; i < s.length/2; i++) {
 			char temp = s[i];
 			s[i] = s[s.length - i];
 			s[s.length - i] = temp;
+		}*/
+		// 一左一右两个指针相向而行
+		int left = 0, right = s.length - 1;
+		while (left < right) {
+			// 交换 s[left] 和 s[right]
+			char temp = s[left];
+			s[left] = s[right];
+			s[right] = temp;
+			left++;
+			right--;
 		}
     }
 }

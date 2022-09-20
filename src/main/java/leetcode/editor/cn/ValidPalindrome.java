@@ -59,6 +59,7 @@ class Solution {
 		}
 
 		String[] ss = sb.toString().toLowerCase().split("");
+		// 双指针
 		int left = 0, right = ss.length - 1;
 		while (left < right) {
 			if (!ss[left].equals(ss[right])){
