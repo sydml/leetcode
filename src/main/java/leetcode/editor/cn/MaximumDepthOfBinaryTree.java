@@ -45,7 +45,20 @@ public class MaximumDepthOfBinaryTree{
  * }
  */
 class Solution {
-    int depth=0;
+    int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        // 利用定义，计算左右子树的最大深度
+        int leftMax = maxDepth(root.left);
+        int rightMax = maxDepth(root.right);
+        // 整棵树的最大深度等于左右子树的最大深度取最大值，
+        // 然后再加上根节点自己
+        int res = Math.max(leftMax, rightMax) + 1;
+
+        return res;
+    }
+    /*int depth=0;
     int res = 0;
     public int maxDepth(TreeNode root) {
         traverse(root);
@@ -61,11 +74,18 @@ class Solution {
         traverse(root.left);
         traverse(root.right);
         depth--;
-    }
+    }*/
 }
 //leetcode submit region end(Prohibit modification and deletion)
 
-public static void main(String[] args) {
-		Solution solution = new MaximumDepthOfBinaryTree().new Solution();
-	}
+    public static void main(String[] args) {
+        Solution solution = new MaximumDepthOfBinaryTree().new Solution();
+        TreeNode root = new TreeNode(2);
+        TreeNode left = new TreeNode(3);
+        TreeNode right = new TreeNode(6);
+        root.setLeft(left);
+        root.setRight(right);
+        root.left.setLeft(new TreeNode(7));
+        solution.maxDepth(root);
+    }
 }
