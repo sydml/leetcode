@@ -83,7 +83,8 @@ class Solution {
 	    Solution solution = new RemoveElement().new Solution();
         int[] nums = new int[]{3, 2, 2, 3};
         solution.removeElement(nums, 3);
-//        System.out.println("++a:" + ++a + "a:" + a);
-//        System.out.println("b++:" + b++ + "b:" + b);
+        int a=0,b=0;
+        System.out.println("++a=" + ++a + ",a=" + a);
+        System.out.println("b++=" + b++ + ",b=" + b);
 	}
 }
