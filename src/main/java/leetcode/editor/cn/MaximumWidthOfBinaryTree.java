@@ -72,7 +72,7 @@ public class MaximumWidthOfBinaryTree{
  */
 class Solution {
     public int widthOfBinaryTree(TreeNode root) {
-
+        return 0;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

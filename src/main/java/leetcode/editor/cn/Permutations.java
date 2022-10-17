@@ -66,7 +66,6 @@ def backtrack(路径, 选择列表):
 public class Permutations{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    /*
     public List<List<Integer>> permute(int[] nums) {
         backtrack(nums, new LinkedList<>());
         return res;
@@ -88,12 +87,14 @@ class Solution {
             track.removeLast();
         }
     }
-    */
+/*
 
     // 回溯算法解决
     List<List<Integer>> res = new LinkedList<>();
 
-    /* 主函数，输入一组不重复的数字，返回它们的全排列 */
+    */
+/* 主函数，输入一组不重复的数字，返回它们的全排列 *//*
+
     public List<List<Integer>> permute(int[] nums) {
         // 记录「路径」
         LinkedList<Integer> track = new LinkedList<>();
@@ -130,6 +131,7 @@ class Solution {
             used[i] = false;
         }
     }
+*/
 
 }
 //leetcode submit region end(Prohibit modification and deletion)
