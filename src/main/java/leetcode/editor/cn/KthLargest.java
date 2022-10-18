@@ -74,4 +74,10 @@ public class KthLargest {
             start = minPos;
         }
     }
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{8, 1, 0, 3, 7, 2};
+        KthLargest k = new KthLargest(arr.length, arr);
+        System.out.println(k.add(2));
+    }
 }
