@@ -34,7 +34,7 @@ import java.util.List;
 public class EightQueensLcci{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    public List<List<String>> solveNQueens(int n) {
+    /*public List<List<String>> solveNQueens(int n) {
 
     }
 
@@ -77,7 +77,7 @@ class Solution {
             System.out.println();
         }
         System.out.println();
-    }
+    }*/
 }
 //leetcode submit region end(Prohibit modification and deletion)
 

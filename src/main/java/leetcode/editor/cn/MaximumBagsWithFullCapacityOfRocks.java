@@ -57,7 +57,7 @@ public class MaximumBagsWithFullCapacityOfRocks{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int maximumBags(int[] capacity, int[] rocks, int additionalRocks) {
-
+        return 0;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
