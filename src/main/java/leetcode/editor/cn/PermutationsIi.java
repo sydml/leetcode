@@ -47,24 +47,33 @@ import java.util.*;
 public class PermutationsIi{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+    List<List<Integer>> res = new ArrayList<>();
+    LinkedList<Integer> track = new LinkedList<>();
+    boolean[] used;
     public List<List<Integer>> permuteUnique(int[] nums) {
-        backtrack(nums, new LinkedList<>());
+        Arrays.sort(nums);
+        used = new boolean[nums.length];
+        backtrack(nums);
         return res;
     }
 
-    List<List<Integer>> res = new ArrayList<>();
-    void backtrack(int[] nums, LinkedList<Integer> track) {
+    void backtrack(int[] nums) {
         if (track.size() == nums.length) {
             res.add(new ArrayList<>(track));
             return;
         }
 
         for (int i = 0; i < nums.length; i++) {
-            if (track.contains(nums[i]))
+            if (used[i]) {
                 continue;
+            }
+            if (i > 0 && nums[i] == nums[i - 1] && !used[i-1]) {
+                continue;
+            }
+            used[i] = true;
             track.add(nums[i]);
-            // 进入下一层决策树
-            backtrack(nums, track);
+            backtrack(nums);
+            used[i]=false;
             track.removeLast();
         }
     }
